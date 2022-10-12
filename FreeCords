@@ -1,0 +1,51 @@
+p = peripheral.find("playerDetector")
+m = peripheral.wrap("right")
+
+
+print("1 = DJ")
+print("2 = Cowboy")
+print("3 = Carter")
+print("4 = Kindcod")
+msg = read()
+
+if msg == "1" then
+PLR = "awesomehome7_dj"
+end
+
+if msg == "2" then
+PLR = "Reeeekid2550"
+end
+
+if msg == "3" then
+PLR = "LargeBallMan"
+end
+
+if msg == "4" then
+PLR = "Kindcod"
+end
+ 
+while true do
+
+if PLR == nil then
+shell.run("FreeCords")
+end
+
+plrPos = p.getPlayerPos(PLR)
+
+m.clear()
+
+m.setTextScale(1)
+m.setCursorPos(1,1)
+m.write(PLR .. "'s info is:")
+m.setCursorPos(1,2)
+m.write("X = " .. plrPos.x)
+m.setCursorPos(1,3)
+m.write("Y = " .. plrPos.y)
+m.setCursorPos(1,4)
+m.write("Z = " .. plrPos.z)
+m.setCursorPos(1,5)
+m.write("Dim = " .. plrPos.dimension)
+sleep(0.1)
+end
+
+
