@@ -1,1 +1,3 @@
 type in "wget run https://raw.githubusercontent.com/OwOsucksAwesomeMinecraftbossAlissha6TRM/computerCraftPrograms/main/AweOSInstaller/disk/startup.lua"
+
+if you want to save the file to a floppy disk, use the github installer that was used in the program.
