@@ -1,0 +1,5 @@
+shell.run("pastebin get wPtGKMam github")
+shell.run("github OwOsucksAwesomeMinecraftbossAlissha6TRM computerCraftPrograms . AweOS")
+shell.run("move downloads/computerCraftPrograms/AweOS AweOS")
+shell.run("github OwOsucksAwesomeMinecraftbossAlissha6TRM computerCraftPrograms . AweOSInstaller/")
+shell.run("move downloads/computerCraftPrograms/AweOSInstaller/startup.lua startup")
