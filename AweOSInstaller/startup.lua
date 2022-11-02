@@ -1,0 +1,1 @@
+shell.run("AweOS/AweOSv1.0.lua")
