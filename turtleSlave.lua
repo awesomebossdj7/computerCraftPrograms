@@ -1,4 +1,4 @@
 while true do
-  turtle.place())
+  turtle.place()
   sleep(0.1)
   end
