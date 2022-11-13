@@ -1,0 +1,5 @@
+shell.run("wget https://raw.githubusercontent.com/OwOsucksAwesomeMinecraftbossAlissha6TRM/computerCraftPrograms/main/roomMakerTurtle/RoomMaker.lua roomMaker")
+shell.run("wget https://raw.githubusercontent.com/OwOsucksAwesomeMinecraftbossAlissha6TRM/computerCraftPrograms/main/roomMakerTurtle/mine5x3.lua mine5x3.lua")
+term.clear()
+term.setCursorPos(1,1)
+print("installed!")
