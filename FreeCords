@@ -1,5 +1,5 @@
 p = peripheral.find("playerDetector")
-m = peripheral.wrap("right")
+m = peripheral.find("monitor")
 
 
 print("1 = DJ")
