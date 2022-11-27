@@ -19,7 +19,7 @@ else
     cmd = true
 end
 cb = peripheral.find("chatBox")
-if cmdblk == nil then
+if cb == nil then
     chatBox = false
 else
     chatBox = true
@@ -223,7 +223,7 @@ elseif x > 0 and x < 7 and y == 12 and menu == true and chatBox == true then
     shell.run("AweOS/chatBoxSayer.lua")
 
     --command block
-elseif x > 0 and x < 8 and y == 19 and menu == true and plrDetect == true then 
+elseif x > 0 and x < 8 and y == 19 and menu == true and cmd == true then 
     paintutils.drawFilledBox(1,20,14,10,colors.cyan)
     menu = false
     
