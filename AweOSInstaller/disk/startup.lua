@@ -1,5 +1,6 @@
 shell.run("pastebin get wPtGKMam github")
 shell.run("github OwOsucksAwesomeMinecraftbossAlissha6TRM computerCraftPrograms . AweOS/AweOS")
-shell.run("move downloads/computerCraftPrograms/AweOS/AweOS AweOS")
+fs.move("downloads/computerCraftPrograms/AweOS/AweOS", "AweOS/")
 shell.run("github OwOsucksAwesomeMinecraftbossAlissha6TRM computerCraftPrograms . AweOSInstaller/")
-shell.run("move downloads/computerCraftPrograms/AweOSInstaller/startup.lua startup")
+fs.move("downloads/computerCraftPrograms/AweOSInstaller/startup.lua","startup")
+fs.delete("downloads/")
