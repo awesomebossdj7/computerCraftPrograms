@@ -1,11 +1,14 @@
 rednet.open("right")
 s = peripheral.find("speaker")
+cb = peripheral.find("chatBox")
 while true do
   senderID, msg = rednet.receive()
   if msg == "endTask" then
     rednet.close("right")
+    return
   else
     s.speak(msg)
+    cb.say(msg)
   end
   sleep(0.1)
 end
