@@ -1,0 +1,15 @@
+rednet.open("back")
+pcID = 4
+while true do
+  term.clear()
+  term.setCursorPos(1,1)
+  msg = read()
+  if msg == "turn off" then
+    rednet.send(pcID,"endTask")
+    rednet.close("back")
+    return
+  end
+  rednet.send(pcID,msg)
+  sleep(0.1)
+end
+  
