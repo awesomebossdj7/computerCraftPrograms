@@ -1,3 +1,5 @@
+--to get this do pastebin get cCtrLv8L
+
 ws = http.websocket("")
  
 args = {...}
