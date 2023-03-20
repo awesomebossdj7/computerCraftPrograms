@@ -12,3 +12,4 @@ file.close()
 serialFileData = textutils.serialise(fileData)
  
 ws.send(serialFileData)
+ws.close()
