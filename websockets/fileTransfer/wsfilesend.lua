@@ -1,3 +1,5 @@
+--to get this do pastebin get cfpUcegP
+
 ws = http.websocket("")
  
 args = {...}
