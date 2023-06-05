@@ -19,5 +19,5 @@ local message = msg
           os.pullEvent("speaker_audio_empty")
       end
   end
-  sleep(0.1
+  sleep(0.1)
 end
