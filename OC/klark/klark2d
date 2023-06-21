@@ -1,0 +1,28 @@
+comp = require("component")
+g = comp.glasses
+
+fh = io.open("/home/Klarkson.obj","r")
+klarkdata = fh:read("*a")
+fh:close()
+
+klark = g.addOBJModel2D()
+
+klark.loadOBJ(klarkdata)
+
+klark.addColor(1,0.5,0)
+klark.addScale(50,50,50)
+--klark.addRotation(180,1,0,0)
+klark.addRotation(180,0,0,1)
+klark.addTranslation(-3,-7,0)
+
+print(klark.isVisible())
+
+
+text = g.addText2D()
+
+text.setText("Hello, I am gustavo")
+text.addTranslation(100,200,0)
+
+os.sleep(3)
+
+text.setText("but you can call me sus")
