@@ -1,0 +1,17 @@
+comp = require("component")
+g = comp.glasses
+
+p1 = g.addItem3D()
+p2 = g.addItem3D()
+p3 = g.addItem3D()
+p4 = g.addItem3D()
+
+p1.setItem("minecraft:wool",6)
+p2.setItem("minecraft:wool",6)
+p3.setItem("minecraft:wool",6)
+p4.setItem("minecraft:wool",6)
+
+p1.addTranslation(0, 3, 0)
+p2.addTranslation(0, 2, 0)
+p3.addTranslation(1, 1, 0)
+p4.addTranslation(-1, 1, 0)
