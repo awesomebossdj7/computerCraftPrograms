@@ -1,5 +1,5 @@
 c = peripheral.find("chatBox")
-ws1 = http.websocket("98.209.180.144:5000")
+ws1 = http.websocket("wss://ccws.skystuff.cc/connect/turtleempire-send/turtlesrule") --5000
 
 while true do
     msg = ws1.receive()
