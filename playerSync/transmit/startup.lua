@@ -3,7 +3,7 @@ b = peripheral.wrap("back")
 
 while true do
     pos = b.getPlayerPos("awesomehome7_dj")
-    ws.send(""..pos.x.." "..pos.y.." "..pos.z)
+    ws.send(""..pos.x.." "..pos.y.." "..pos.z.." "..pos.yaw.." "..pos.pitch)
     sleep(0.1)
 end
     
