@@ -5,6 +5,6 @@ local page = http.get(args[1])
 local data = page.readAll()
 page.close()
 
-file.open(args[2],"w")
+file = fs.open(args[2],"w")
 file.write(data)
 file.close()
