@@ -1,8 +1,8 @@
 args = {...}
 
-page = http.get(args[1])
+local page = http.get(args[1])
 
-data = page.readAll()
+local data = page.readAll()
 page.close()
 
 file.open(args[2],"w")
