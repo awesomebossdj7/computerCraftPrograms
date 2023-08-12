@@ -1,0 +1,8 @@
+ws = http.websocket("wss://ccws.skystuff.cc/connect/1-19-2/nigganuts")
+
+while true do
+    pos = ws.receive()
+    exec("teleport @e[name=1.19.2] "..pos)
+    sleep(0.1)
+end
+    
