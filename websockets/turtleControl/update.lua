@@ -5,7 +5,7 @@ while true do
 	msg = textutils.unserialiseJSON(webmsg)
 	
 
-	if msg.id == os.getComputerId() then
+	if msg.id == os.getComputerID() then
 		if msg.cmd == nil then
 			sleep(0.1)
 		else
