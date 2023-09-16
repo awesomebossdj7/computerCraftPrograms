@@ -9,7 +9,10 @@ while true do
 		if msg.cmd == nil then
 			sleep(0.1)
 		else
+			ws.close()
+			shell.openTab("update.lua")
 			shell.run(msg.cmd)
+			
 		end
 	end
 	
