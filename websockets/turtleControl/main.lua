@@ -1,5 +1,5 @@
-ws = http.websocket("98.209.180.144:4000")
-ws2 = http.websocket("98.209.180.144:4001")
+ws = http.websocket("wss://ccws.skystuff.cc/connect/turtlecontrolcontrolling/peniscock6969")
+ws2 = http.websocket("wss://ccws.skystuff.cc/connect/turtlecontrolinfo/peniscock6969")
 
 while true do
     msg = ws.receive()
