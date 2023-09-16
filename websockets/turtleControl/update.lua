@@ -1,4 +1,4 @@
-ws = http.websocket("wss://ccws.skystuff.cc/connect/turtlecontrolupdate/nigganuts6969")
+ws = http.websocket("wss://ccws.skystuff.cc/connect/turtlecontrolupdate/peniscock6969")
 
 while true do
 	msg = textutils.unserialiseJSON(ws.receive())
