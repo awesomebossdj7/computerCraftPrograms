@@ -9,7 +9,7 @@ while true do
 		if msg.cmd == nil then
 			sleep(0.1)
 		else
-			shell.run(msg)
+			shell.run(msg.cmd)
 		end
 	end
 	
