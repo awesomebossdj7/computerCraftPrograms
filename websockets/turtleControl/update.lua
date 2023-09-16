@@ -1,7 +1,8 @@
 ws = http.websocket("wss://ccws.skystuff.cc/connect/turtlecontrolupdate/peniscock6969")
 
 while true do
-	msg = textutils.unserialiseJSON(ws.receive())
+	webmsg, _ = ws.receive()
+	msg = textutils.unserialiseJSON(webmsg)
 	
 
 	if msg.id == os.getComputerId() then
