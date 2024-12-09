@@ -12,7 +12,6 @@ end
 shell.run(".rom/printOverwrite.lua")
 
 function main()
-    term.write(""..os.getComputerLabel().." | "..os.getComputerID())
     while true do
         fake = _G.WS.receive()
         tbl = textutils.unserialiseJSON(fake)
@@ -21,10 +20,24 @@ function main()
                 if tonumber(tbl["id"]) == os.getComputerID() then
                     loadstring(tbl["msg"])()
                 end
+            elseif tbl["type"] == "refreshInv" then
+                if tonumber(tbl["id"]) == os.getComputerID() then
+                    inv()
+                end
             end
         end
         sleep(0)
     end
+end
+
+function inv()
+    tbl = {}
+    tbl["type"] = "inventory"
+    tbl["id"] = os.getComputerID()
+    for i=1,16 do
+        tbl["slot_"..tostring(i)] = turtle.getItemDetail(i)
+    end
+    _G.WS2.send(textutils.serialiseJSON(tbl))
 end
 
 function events()
@@ -39,7 +52,11 @@ function events()
             tbl["type"] = "event"
             tbl["id"] = os.getComputerID()
             _G.WS2.send(textutils.serialiseJSON(tbl))
+            if event == "turtle_inventory" then
+                inv()
+            end
         end
+        
         sleep(0)
     end
 end
