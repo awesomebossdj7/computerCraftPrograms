@@ -21,6 +21,15 @@ function inv()
     _G.WS2.send(textutils.serialiseJSON(tbl))
 end
 
+function test()
+    print("sigma")
+    print("sigma")
+    print("sigma")
+    print("sigma")
+    print("sigma")
+    print("sigma")
+end
+
 function main()
     term.write(os.getComputerLabel().." | ID: "..os.getComputerID())
     while true do
