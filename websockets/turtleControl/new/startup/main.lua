@@ -22,6 +22,7 @@ function inv()
 end
 
 function main()
+    term.write(os.getComputerLabel().." | ID: "..os.getComputerID())
     while true do
         fake = _G.WS.receive()
         tbl = textutils.unserialiseJSON(fake)
