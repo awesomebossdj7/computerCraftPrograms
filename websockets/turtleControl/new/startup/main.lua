@@ -12,6 +12,7 @@ end
 shell.run(".rom/printOverwrite.lua")
 
 function main()
+    term.write(""..os.getComputerLabel().." | "..os.getComputerID())
     while true do
         fake = _G.WS.receive()
         tbl = textutils.unserialiseJSON(fake)
