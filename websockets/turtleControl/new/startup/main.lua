@@ -16,6 +16,9 @@ function inv()
     tbl["type"] = "inventory"
     tbl["id"] = os.getComputerID()
     for i=1,16 do
+        tbl["slot_"..tostring(i)] = {}
+        tbl["slot_"..tostring(i)]["count"] = 0
+        tbl["slot_"..tostring(i)]["name"] = "minecraft:air"
         tbl["slot_"..tostring(i)] = turtle.getItemDetail(i)
     end
     _G.WS2.send(textutils.serialiseJSON(tbl))
