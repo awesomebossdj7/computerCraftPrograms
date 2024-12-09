@@ -11,6 +11,16 @@ end
 
 shell.run(".rom/printOverwrite.lua")
 
+function inv()
+    tbl = {}
+    tbl["type"] = "inventory"
+    tbl["id"] = os.getComputerID()
+    for i=1,16 do
+        tbl["slot_"..tostring(i)] = turtle.getItemDetail(i)
+    end
+    _G.WS2.send(textutils.serialiseJSON(tbl))
+end
+
 function main()
     while true do
         fake = _G.WS.receive()
@@ -28,16 +38,6 @@ function main()
         end
         sleep(0)
     end
-end
-
-function inv()
-    tbl = {}
-    tbl["type"] = "inventory"
-    tbl["id"] = os.getComputerID()
-    for i=1,16 do
-        tbl["slot_"..tostring(i)] = turtle.getItemDetail(i)
-    end
-    _G.WS2.send(textutils.serialiseJSON(tbl))
 end
 
 function events()
