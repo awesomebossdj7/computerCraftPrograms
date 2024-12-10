@@ -61,6 +61,9 @@ function events()
             if event == "turtle_inventory" then
                 inv()
             end
+            if event == "turtle_response" then
+                inv()
+            end
         end
         
         sleep(0)
