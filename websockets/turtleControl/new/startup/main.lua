@@ -19,7 +19,9 @@ function inv()
         tbl["slot_"..tostring(i)] = {}
         tbl["slot_"..tostring(i)]["count"] = 0
         tbl["slot_"..tostring(i)]["name"] = "minecraft:air"
-        tbl["slot_"..tostring(i)] = turtle.getItemDetail(i)
+        if turtle.getItemDetail(i) ~= nil then
+            tbl["slot_"..tostring(i)] = turtle.getItemDetail(i)
+        end
     end
     _G.WS2.send(textutils.serialiseJSON(tbl))
 end
