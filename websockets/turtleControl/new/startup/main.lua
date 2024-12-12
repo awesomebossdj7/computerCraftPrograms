@@ -19,9 +19,7 @@ function inv()
         tbl["slot_"..tostring(i)] = {}
         tbl["slot_"..tostring(i)]["count"] = 0
         tbl["slot_"..tostring(i)]["name"] = "minecraft:air"
-        if turtle.getItemDetail(i) ~= nil then
-            tbl["slot_"..tostring(i)] = turtle.getItemDetail(i)
-        end
+        tbl["slot_"..tostring(i)] = turtle.getItemDetail(i)
     end
     _G.WS2.send(textutils.serialiseJSON(tbl))
 end
@@ -34,7 +32,18 @@ function main()
         if tbl["type"] ~= nil then
             if tbl["type"] == "function" then
                 if tonumber(tbl["id"]) == os.getComputerID() then
-                    loadstring(tbl["msg"])()
+                    af=loadstring(tbl["msg"])
+                    setfenv(af,
+                        {
+                            peripheral=peripheral,
+                            turtle=turtle,
+                            os={
+                                getComputerID=os.getComputerID,
+                                getComputerLabel=os.getComputerLabel
+                            }
+                        }
+                    )
+                    af()
                 end
             elseif tbl["type"] == "refreshInv" then
                 if tonumber(tbl["id"]) == os.getComputerID() then
